@@ -30,7 +30,7 @@ class ImportController extends Controller
         }
         
         $request->validate([
-            "excel_file" => "required|mimes:xlsx,xls",
+            "excel_file" => "required|file|mimes:xlsx,xls",
         ]);
 
         $file = $request->file("excel_file");
